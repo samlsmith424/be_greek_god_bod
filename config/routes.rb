@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # get 'exercises/index'
   namespace :api do
     namespace :v1 do
-      resources: :exercises, only: [:index]
+      resources :exercises, only: [:index]
     end
   end
 end
