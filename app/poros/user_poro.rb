@@ -1,11 +1,15 @@
 class UserPoro
-  attr_reader
+  attr_reader :id, :workouts
 
-  def initialize(user, workouts, exercises, set)
+  def initialize(user, workout_exercises, sets)
+    @id = user.id
     @user = user
-    @workouts = workouts
-    @exercises = exercises
-    @set = set
+    @workouts = set_workouts(user.workouts)
   end
 
+  def set_workouts(workouts)
+    workouts.each do |workout|
+      WorkoutPoro.new(workout)
+    end
+  end
 end
