@@ -1,0 +1,138 @@
+{
+    "data": {
+        "id": "1",
+        "type": "user",
+        "attributes": {
+            "workouts": [
+                {
+                    "name": "killer chest day",
+                    "exercises": [
+                        {
+                            "id": 1,
+                            "name": "bench press",
+                            "muscle_group": 1,
+                            "created_at": "2022-05-16T18:53:16.351Z",
+                            "updated_at": "2022-05-16T18:53:16.351Z"
+                        }
+                    ],
+                    "workout_exercises": [
+                        {
+                            "time": "2022-05-16T18:53:16.374Z",
+                            "intervals": [
+                                {
+                                    "id": 1,
+                                    "reps": 12,
+                                    "weight_lbs": 135.0,
+                                    "workout_exercise_id": 1
+                                },
+                                {
+                                    "id": 2,
+                                    "reps": 12,
+                                    "weight_lbs": 145.0,
+                                    "workout_exercise_id": 1
+                                },
+                                {
+                                    "id": 3,
+                                    "reps": 12,
+                                    "weight_lbs": 125.0,
+                                    "workout_exercise_id": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "killer back day",
+                    "exercises": [
+                        {
+                            "id": 2,
+                            "name": "Lat Pull downs",
+                            "muscle_group": 2,
+                            "created_at": "2022-05-16T18:53:16.362Z",
+                            "updated_at": "2022-05-16T18:53:16.362Z"
+                        }
+                    ],
+                    "workout_exercises": [
+                        {
+                            "time": "2022-05-16T18:53:16.398Z",
+                            "intervals": [
+                                {
+                                    "id": 4,
+                                    "reps": 12,
+                                    "weight_lbs": 135.0,
+                                    "workout_exercise_id": 2
+                                },
+                                {
+                                    "id": 5,
+                                    "reps": 12,
+                                    "weight_lbs": 145.0,
+                                    "workout_exercise_id": 2
+                                },
+                                {
+                                    "id": 6,
+                                    "reps": 12,
+                                    "weight_lbs": 125.0,
+                                    "workout_exercise_id": 2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "killer leg day",
+                    "exercises": [
+                        {
+                            "id": 3,
+                            "name": "Squats",
+                            "muscle_group": 3,
+                            "created_at": "2022-05-16T18:53:16.363Z",
+                            "updated_at": "2022-05-16T18:53:16.363Z"
+                        }
+                    ],
+                    "workout_exercises": [
+                        {
+                            "time": "2022-05-16T18:53:16.400Z",
+                            "intervals": []
+                        }
+                    ]
+                },
+                {
+                    "name": "killer shoulder day",
+                    "exercises": [
+                        {
+                            "id": 4,
+                            "name": "Shoulder Press",
+                            "muscle_group": 4,
+                            "created_at": "2022-05-16T18:53:16.364Z",
+                            "updated_at": "2022-05-16T18:53:16.364Z"
+                        }
+                    ],
+                    "workout_exercises": [
+                        {
+                            "time": "2022-05-16T18:53:16.402Z",
+                            "intervals": []
+                        }
+                    ]
+                },
+                {
+                    "name": "killer arm day",
+                    "exercises": [
+                        {
+                            "id": 5,
+                            "name": "Bicep Curl",
+                            "muscle_group": 5,
+                            "created_at": "2022-05-16T18:53:16.365Z",
+                            "updated_at": "2022-05-16T18:53:16.365Z"
+                        }
+                    ],
+                    "workout_exercises": [
+                        {
+                            "time": "2022-05-16T18:53:16.403Z",
+                            "intervals": []
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
