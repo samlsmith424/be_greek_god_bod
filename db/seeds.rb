@@ -30,6 +30,10 @@ workout_9 = Workout.create(name: 'awesome shoulder day', user_id: "#{user_2.id}"
 workout_10 = Workout.create(name: 'awesome arm day', user_id: "#{user_2.id}")
 
 exercise_1 = Exercise.create(name: 'bench press', muscle_group: 1)
+exercise_6 = Exercise.create(name: 'incline bench press', muscle_group: 1)
+exercise_7 = Exercise.create(name: 'decline bench press', muscle_group: 1)
+exercise_8 = Exercise.create(name: 'dumbbell bench press', muscle_group: 1)
+exercise_9 = Exercise.create(name: 'pec flyes', muscle_group: 1)
 exercise_2 = Exercise.create(name: 'Lat Pull downs', muscle_group: 2)
 exercise_3 = Exercise.create(name: 'Squats', muscle_group: 3)
 exercise_4 = Exercise.create(name: 'Shoulder Press', muscle_group: 4)
