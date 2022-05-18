@@ -42,11 +42,11 @@ exercise_12 = Exercise.create(name: 'T bar', muscle_group: 2)
 exercise_13 = Exercise.create(name: 'High Low Rows', muscle_group: 2)
 # back exercises ^^
 exercise_3 = Exercise.create(name: 'Squats', muscle_group: 3)
-exercise_3 = Exercise.create(name: 'Deadlifts', muscle_group: 3)
-exercise_3 = Exercise.create(name: 'Hack Squats', muscle_group: 3)
-exercise_3 = Exercise.create(name: 'Leg Curl', muscle_group: 3)
-exercise_3 = Exercise.create(name: 'Leg extensions', muscle_group: 3)
-
+exercise_14 = Exercise.create(name: 'Deadlifts', muscle_group: 3)
+exercise_15 = Exercise.create(name: 'Hack Squats', muscle_group: 3)
+exercise_16 = Exercise.create(name: 'Leg Curl', muscle_group: 3)
+exercise_17 = Exercise.create(name: 'Leg extensions', muscle_group: 3)
+# leg day obvi lol
 exercise_4 = Exercise.create(name: 'Shoulder Press', muscle_group: 4)
 exercise_5 = Exercise.create(name: 'Bicep Curl', muscle_group: 5)
 
@@ -64,6 +64,11 @@ workout_exercise_18 = WorkoutExercise.create(workout_id: "#{workout_2.id}", exer
 workout_exercise_19 = WorkoutExercise.create(workout_id: "#{workout_2.id}", exercise_id: "#{exercise_13.id}")
 # back workoutexercises ^^
 workout_exercise_3 = WorkoutExercise.create(workout_id: "#{workout_3.id}", exercise_id: "#{exercise_3.id}")
+workout_exercise_14 = WorkoutExercise.create(workout_id: "#{workout_3.id}", exercise_id: "#{exercise_14.id}")
+workout_exercise_15 = WorkoutExercise.create(workout_id: "#{workout_3.id}", exercise_id: "#{exercise_15.id}")
+workout_exercise_16 = WorkoutExercise.create(workout_id: "#{workout_3.id}", exercise_id: "#{exercise_16.id}")
+workout_exercise_17 = WorkoutExercise.create(workout_id: "#{workout_3.id}", exercise_id: "#{exercise_17.id}")
+# leg workout exercises ^^
 workout_exercise_4 = WorkoutExercise.create(workout_id: "#{workout_4.id}", exercise_id: "#{exercise_4.id}")
 workout_exercise_5 = WorkoutExercise.create(workout_id: "#{workout_5.id}", exercise_id: "#{exercise_5.id}")
 
