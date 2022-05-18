@@ -58,7 +58,7 @@ exercise_22 = Exercise.create(name: 'Tricep Extension', muscle_group: 5)
 exercise_23 = Exercise.create(name: 'Preacher Curls', muscle_group: 5)
 exercise_24 = Exercise.create(name: 'Dips', muscle_group: 5)
 exercise_25 = Exercise.create(name: 'Skull Crushers', muscle_group: 5)
-# arms 
+# arms ^^
 workout_exercise_1 = WorkoutExercise.create(workout_id: "#{workout_1.id}", exercise_id: "#{exercise_1.id}")
 workout_exercise_11 = WorkoutExercise.create(workout_id: "#{workout_1.id}", exercise_id: "#{exercise_2.id}")
 workout_exercise_12 = WorkoutExercise.create(workout_id: "#{workout_1.id}", exercise_id: "#{exercise_6.id}")
@@ -85,7 +85,11 @@ workout_exercise_26 = WorkoutExercise.create(workout_id: "#{workout_4.id}", exer
 workout_exercise_27 = WorkoutExercise.create(workout_id: "#{workout_4.id}", exercise_id: "#{exercise_21.id}")
 # shoulders ^^
 workout_exercise_5 = WorkoutExercise.create(workout_id: "#{workout_5.id}", exercise_id: "#{exercise_5.id}")
-
+workout_exercise_28 = WorkoutExercise.create(workout_id: "#{workout_5.id}", exercise_id: "#{exercise_22.id}")
+workout_exercise_29 = WorkoutExercise.create(workout_id: "#{workout_5.id}", exercise_id: "#{exercise_23.id}")
+workout_exercise_30 = WorkoutExercise.create(workout_id: "#{workout_5.id}", exercise_id: "#{exercise_24.id}")
+workout_exercise_31 = WorkoutExercise.create(workout_id: "#{workout_5.id}", exercise_id: "#{exercise_25.id}")
+# arms ^^
 workout_exercise_6 = WorkoutExercise.create(workout_id: "#{workout_6.id}", exercise_id: "#{exercise_1.id}")
 workout_exercise_7 = WorkoutExercise.create(workout_id: "#{workout_7.id}", exercise_id: "#{exercise_2.id}")
 workout_exercise_8 = WorkoutExercise.create(workout_id: "#{workout_8.id}", exercise_id: "#{exercise_3.id}")
@@ -128,14 +132,22 @@ end
   Interval.create (reps: 12, weight_lbs: (125 + ((1 + i) * 5), workout_exercise_id: "#{workout_exercise_27.id}")
 end
 # shoulders ^^
+5.times do |i|
+  Interval.create (reps: 12, weight_lbs: (125 + ((1 + i) * 5), workout_exercise_id: "#{workout_exercise_5.id}")
+  Interval.create (reps: 12, weight_lbs: (125 + ((1 + i) * 5), workout_exercise_id: "#{workout_exercise_28.id}")
+  Interval.create (reps: 12, weight_lbs: (125 + ((1 + i) * 5), workout_exercise_id: "#{workout_exercise_29.id}")
+  Interval.create (reps: 12, weight_lbs: (125 + ((1 + i) * 5), workout_exercise_id: "#{workout_exercise_30.id}")
+  Interval.create (reps: 12, weight_lbs: (125 + ((1 + i) * 5), workout_exercise_id: "#{workout_exercise_31.id}")
+end
+# arms ^^
 # set_13 = Interval.create(reps: 12, weight_lbs: 135.0, workout_exercise_id: "#{workout_exercise_11.id}")
 # set_14 = Interval.create(reps: 12, weight_lbs: 145.0, workout_exercise_id: "#{workout_exercise_11.id}")
 # set_15 = Interval.create(reps: 12, weight_lbs: 125.0, workout_exercise_id: "#{workout_exercise_11.id}")
 # set_16 = Interval.create(reps: 12, weight_lbs: 125.0, workout_exercise_id: "#{workout_exercise_11.id}")
 
-set_4 = Interval.create(reps: 12, weight_lbs: 135.0, workout_exercise_id: "#{workout_exercise_2.id}")
-set_5 = Interval.create(reps: 12, weight_lbs: 145.0, workout_exercise_id: "#{workout_exercise_2.id}")
-set_6 = Interval.create(reps: 12, weight_lbs: 125.0, workout_exercise_id: "#{workout_exercise_2.id}")
+# set_4 = Interval.create(reps: 12, weight_lbs: 135.0, workout_exercise_id: "#{workout_exercise_2.id}")
+# set_5 = Interval.create(reps: 12, weight_lbs: 145.0, workout_exercise_id: "#{workout_exercise_2.id}")
+# set_6 = Interval.create(reps: 12, weight_lbs: 125.0, workout_exercise_id: "#{workout_exercise_2.id}")
 
 set_7 = Interval.create(reps: 12, weight_lbs: 135.0, workout_exercise_id: "#{workout_exercise_6.id}")
 set_8 = Interval.create(reps: 12, weight_lbs: 145.0, workout_exercise_id: "#{workout_exercise_6.id}")
