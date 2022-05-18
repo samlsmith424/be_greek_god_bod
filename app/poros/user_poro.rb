@@ -8,7 +8,7 @@ class UserPoro
   end
 
   def set_workouts(workouts)
-    workouts.each do |workout|
+    workouts.map do |workout|
       WorkoutPoro.new(workout)
     end
   end
