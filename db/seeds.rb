@@ -75,6 +75,11 @@ workout_exercise_22 = WorkoutExercise.create(workout_id: "#{workout_3.id}", exer
 workout_exercise_23 = WorkoutExercise.create(workout_id: "#{workout_3.id}", exercise_id: "#{exercise_17.id}")
 # leg workout exercises ^^
 workout_exercise_4 = WorkoutExercise.create(workout_id: "#{workout_4.id}", exercise_id: "#{exercise_4.id}")
+workout_exercise_24 = WorkoutExercise.create(workout_id: "#{workout_4.id}", exercise_id: "#{exercise_18.id}")
+workout_exercise_25 = WorkoutExercise.create(workout_id: "#{workout_4.id}", exercise_id: "#{exercise_19.id}")
+workout_exercise_26 = WorkoutExercise.create(workout_id: "#{workout_4.id}", exercise_id: "#{exercise_20.id}")
+workout_exercise_27 = WorkoutExercise.create(workout_id: "#{workout_4.id}", exercise_id: "#{exercise_21.id}")
+# shoulders ^^ 
 workout_exercise_5 = WorkoutExercise.create(workout_id: "#{workout_5.id}", exercise_id: "#{exercise_5.id}")
 
 workout_exercise_6 = WorkoutExercise.create(workout_id: "#{workout_6.id}", exercise_id: "#{exercise_1.id}")
