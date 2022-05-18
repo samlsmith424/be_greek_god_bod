@@ -5,6 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Interval.destroy_all
+WorkoutExercise.destroy_all
+Exercise.destroy_all
+Workout.destroy_all
+User.destroy_all
 
 user_1 = User.create(name: 'user_1', password: 'password1')
 user_2 = User.create(name: 'user_2', password: 'password2')
@@ -31,6 +36,7 @@ exercise_4 = Exercise.create(name: 'Shoulder Press', muscle_group: 4)
 exercise_5 = Exercise.create(name: 'Bicep Curl', muscle_group: 5)
 
 workout_exercise_1 = WorkoutExercise.create(workout_id: "#{workout_1.id}", exercise_id: "#{exercise_1.id}")
+workout_exercise_11 = WorkoutExercise.create(workout_id: "#{workout_1.id}", exercise_id: "#{exercise_2.id}")
 workout_exercise_2 = WorkoutExercise.create(workout_id: "#{workout_2.id}", exercise_id: "#{exercise_2.id}")
 workout_exercise_3 = WorkoutExercise.create(workout_id: "#{workout_3.id}", exercise_id: "#{exercise_3.id}")
 workout_exercise_4 = WorkoutExercise.create(workout_id: "#{workout_4.id}", exercise_id: "#{exercise_4.id}")

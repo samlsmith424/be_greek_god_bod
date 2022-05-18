@@ -29,6 +29,15 @@ ActiveRecord::Schema.define(version: 2022_05_16_185210) do
     t.index ["workout_exercise_id"], name: "index_intervals_on_workout_exercise_id"
   end
 
+  create_table "sets", force: :cascade do |t|
+    t.integer "reps"
+    t.float "weight_lbs"
+    t.bigint "workout_exercise_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["workout_exercise_id"], name: "index_sets_on_workout_exercise_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "password"
@@ -54,6 +63,7 @@ ActiveRecord::Schema.define(version: 2022_05_16_185210) do
   end
 
   add_foreign_key "intervals", "workout_exercises"
+  add_foreign_key "sets", "workout_exercises"
   add_foreign_key "workout_exercises", "exercises"
   add_foreign_key "workout_exercises", "workouts"
   add_foreign_key "workouts", "users"
