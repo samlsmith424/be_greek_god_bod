@@ -48,6 +48,11 @@ exercise_16 = Exercise.create(name: 'Leg Curl', muscle_group: 3)
 exercise_17 = Exercise.create(name: 'Leg extensions', muscle_group: 3)
 # leg day obvi lol
 exercise_4 = Exercise.create(name: 'Shoulder Press', muscle_group: 4)
+exercise_18 = Exercise.create(name: 'Arnold Press', muscle_group: 4)
+exercise_19 = Exercise.create(name: 'Lateral Raise', muscle_group: 4)
+exercise_20 = Exercise.create(name: 'Reverse Flyes', muscle_group: 4)
+exercise_21 = Exercise.create(name: 'Upright Row', muscle_group: 4)
+# shoulders ^^
 exercise_5 = Exercise.create(name: 'Bicep Curl', muscle_group: 5)
 
 workout_exercise_1 = WorkoutExercise.create(workout_id: "#{workout_1.id}", exercise_id: "#{exercise_1.id}")
@@ -89,7 +94,7 @@ set_3 = Interval.create(reps: 12, weight_lbs: 125.0, workout_exercise_id: "#{wor
   Interval.create (reps: 12, weight_lbs: (125 + ((1 + i) * 5), workout_exercise_id: "#{workout_exercise_14.id}")
   Interval.create (reps: 12, weight_lbs: (125 + ((1 + i) * 5), workout_exercise_id: "#{workout_exercise_15.id}")
 end
-
+# chest ^^
 5.times do |i|
   Interval.create (reps: 12, weight_lbs: (125 + ((1 + i) * 5), workout_exercise_id: "#{workout_exercise_2.id}")
   Interval.create (reps: 12, weight_lbs: (125 + ((1 + i) * 5), workout_exercise_id: "#{workout_exercise_16.id}")
@@ -97,7 +102,7 @@ end
   Interval.create (reps: 12, weight_lbs: (125 + ((1 + i) * 5), workout_exercise_id: "#{workout_exercise_18.id}")
   Interval.create (reps: 12, weight_lbs: (125 + ((1 + i) * 5), workout_exercise_id: "#{workout_exercise_19.id}")
 end
-
+# back ^^
 5.times do |i|
   Interval.create (reps: 12, weight_lbs: (125 + ((1 + i) * 5), workout_exercise_id: "#{workout_exercise_3.id}")
   Interval.create (reps: 12, weight_lbs: (125 + ((1 + i) * 5), workout_exercise_id: "#{workout_exercise_20.id}")
@@ -105,6 +110,7 @@ end
   Interval.create (reps: 12, weight_lbs: (125 + ((1 + i) * 5), workout_exercise_id: "#{workout_exercise_22.id}")
   Interval.create (reps: 12, weight_lbs: (125 + ((1 + i) * 5), workout_exercise_id: "#{workout_exercise_23.id}")
 end
+# legs ^^
 # set_13 = Interval.create(reps: 12, weight_lbs: 135.0, workout_exercise_id: "#{workout_exercise_11.id}")
 # set_14 = Interval.create(reps: 12, weight_lbs: 145.0, workout_exercise_id: "#{workout_exercise_11.id}")
 # set_15 = Interval.create(reps: 12, weight_lbs: 125.0, workout_exercise_id: "#{workout_exercise_11.id}")
