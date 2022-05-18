@@ -34,12 +34,19 @@ exercise_6 = Exercise.create(name: 'incline bench press', muscle_group: 1)
 exercise_7 = Exercise.create(name: 'decline bench press', muscle_group: 1)
 exercise_8 = Exercise.create(name: 'dumbbell bench press', muscle_group: 1)
 exercise_9 = Exercise.create(name: 'pec flyes', muscle_group: 1)
+# chest exercises ^^
 exercise_2 = Exercise.create(name: 'Lat Pull downs', muscle_group: 2)
 exercise_10 = Exercise.create(name: 'Cable Rows', muscle_group: 2)
 exercise_11 = Exercise.create(name: 'Pull ups', muscle_group: 2)
 exercise_12 = Exercise.create(name: 'T bar', muscle_group: 2)
 exercise_13 = Exercise.create(name: 'High Low Rows', muscle_group: 2)
+# back exercises ^^
 exercise_3 = Exercise.create(name: 'Squats', muscle_group: 3)
+exercise_3 = Exercise.create(name: 'Deadlifts', muscle_group: 3)
+exercise_3 = Exercise.create(name: 'Hack Squats', muscle_group: 3)
+exercise_3 = Exercise.create(name: 'Leg Curl', muscle_group: 3)
+exercise_3 = Exercise.create(name: 'Leg extensions', muscle_group: 3)
+
 exercise_4 = Exercise.create(name: 'Shoulder Press', muscle_group: 4)
 exercise_5 = Exercise.create(name: 'Bicep Curl', muscle_group: 5)
 
