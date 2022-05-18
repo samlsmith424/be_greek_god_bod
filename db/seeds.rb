@@ -54,7 +54,11 @@ exercise_20 = Exercise.create(name: 'Reverse Flyes', muscle_group: 4)
 exercise_21 = Exercise.create(name: 'Upright Row', muscle_group: 4)
 # shoulders ^^
 exercise_5 = Exercise.create(name: 'Bicep Curl', muscle_group: 5)
-
+exercise_22 = Exercise.create(name: 'Tricep Extension', muscle_group: 5)
+exercise_23 = Exercise.create(name: 'Preacher Curls', muscle_group: 5)
+exercise_24 = Exercise.create(name: 'Dips', muscle_group: 5)
+exercise_25 = Exercise.create(name: 'Skull Crushers', muscle_group: 5)
+# arms 
 workout_exercise_1 = WorkoutExercise.create(workout_id: "#{workout_1.id}", exercise_id: "#{exercise_1.id}")
 workout_exercise_11 = WorkoutExercise.create(workout_id: "#{workout_1.id}", exercise_id: "#{exercise_2.id}")
 workout_exercise_12 = WorkoutExercise.create(workout_id: "#{workout_1.id}", exercise_id: "#{exercise_6.id}")
