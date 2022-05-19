@@ -75,8 +75,8 @@ jobs:
       - run:
           name: Database setup
           command:
-            rails db:create
-            rails db:schema:load --trace
+            rake db:create
+            rake db:schema:load --trace
       # Run rspec in parallel
       - ruby/rspec-test
 
