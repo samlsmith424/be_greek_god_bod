@@ -1,7 +1,7 @@
 class UserPoro
   attr_reader :id, :workouts
 
-  def initialize(user, workout_exercises, sets)
+  def initialize(user, workout_exercises)
     @id = user.id
     @user = user
     @workouts = set_workouts(user.workouts)
