@@ -58,13 +58,23 @@ jobs:
       # Here we make sure that the secondary container boots
       # up before we run operations on the database.
       - run:
+          name: Force Bundler Version
+          command: |
+            echo 'export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d " ")' >> $BASH_ENV
+            source $BASH_ENV
+            gem install bundler
+      - run:
+          name: Which bundler?
+          command: bundle -v
+      - run:
+          name: Bundle install
+          command: bundle install
+      - run:
           name: Wait for DB
           command: dockerize -wait tcp://localhost:5432 -timeout 1m
       - run:
           name: Database setup
           command:
-            gem install bundler
-            bundle install
             bundle exec rake db:create
             bundle exec rake db:schema:load --trace
       # Run rspec in parallel
