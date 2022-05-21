@@ -3,6 +3,6 @@ class CreateWorkoutSerializer
 
   set_type 'workout'
 
-  attributes :workout
+  attribute :workout
   attribute :exercise
 end
