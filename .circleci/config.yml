@@ -77,6 +77,10 @@ jobs:
           command:
             rake db:create
             rake db:schema:load --trace
+      - run:
+          name: Deploy to Heroku
+          command:
+            git push heroku main
       # Run rspec in parallel
       - ruby/rspec-test
 
