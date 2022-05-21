@@ -1,6 +1,6 @@
 class Api::V1::UserController < ApplicationController
 
-  def index
+  def show
     user = User.find(params[:id])
     user_obj = UserPoro.new(user, user.workouts)
     render json: UserSerializer.new(user_obj)
@@ -10,7 +10,7 @@ class Api::V1::UserController < ApplicationController
     @user = User.find_by(id: params[:id])
     @workout = @user.workouts.create(name: params[:name])
     @exercises = params[:exercises].map do |exercise|
-      @details = Exercise.create!(name: JSON.parse(exercise.to_json, symbolize_names: true))
+      @details = Exercise.create!(name: exercise[:name], gif: exercise[:gifUrl])
       @instance = WorkoutExercise.create!(workout_id: @workout.id, exercise_id: @details.id )
     end
     render json: CreateWorkoutSerializer.new(@exercises), status: 201
@@ -23,6 +23,8 @@ class Api::V1::UserController < ApplicationController
         @instance.intervals.create!(reps: sets[:reps] , weight_lbs: sets[:weight_lbs])
       end
     end
+    # change status to completed
     render json: {message: "Workout Completed"}, status: 200
+
   end
 end
