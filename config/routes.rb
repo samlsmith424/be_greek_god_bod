@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :exercises, only: [:index]
-      resources :user
+      resources :workouts, only: [:index]
+      resources :user, except: [:delete, :index]
     end
   end
 end
