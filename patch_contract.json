@@ -1,0 +1,67 @@
+{
+  "data": [
+      {
+      "id": 68,
+      "intervals": [
+        {
+          "reps": 12,
+          "weight_lbs": 130
+        },
+        {
+          "reps": 12,
+          "weight_lbs": 150
+        },
+        {
+          "reps": 12,
+          "weight_lbs": 170
+        }
+      ]
+      },
+      {
+      "id": 69,
+      "intervals": [  {
+          "reps": 12,
+          "weight_lbs": 130
+        },
+        {
+          "reps": 12,
+          "weight_lbs": 150
+        },
+        {
+          "reps": 12,
+          "weight_lbs": 170
+        }]
+    }
+  ]
+}
+
+[
+  {
+    "reps": 12,
+    "weight_lbs": 130
+  },
+  {
+    "reps": 12,
+    "weight_lbs": 150
+  },
+  {
+    "reps": 12,
+    "weight_lbs": 170
+  }
+]
+
+
+  {
+    "reps": 12,
+    "weight_lbs": 130
+  }
+  {
+    "reps": 12,
+    "weight_lbs": 150
+  },
+  {
+    "reps": 12,
+    "weight_lbs": 170
+  }
+}
+]

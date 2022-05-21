@@ -4,7 +4,7 @@ class WorkoutPoro
   def initialize(workout)
     @name = workout.name
     @exercises = workout.exercises
-    @workout_exercises = set_workout_exercises(workout.workout_exercises)
+    @workout_instance = set_workout_exercises(workout.workout_exercises)
   end
 
   def set_workout_exercises(workout_exercises)
