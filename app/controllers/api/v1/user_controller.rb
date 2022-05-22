@@ -1,30 +1,25 @@
 class Api::V1::UserController < ApplicationController
+  before_action :find_user, only: [:show, :create]
 
   def show
-    user = User.find(params[:id])
-    user_obj = UserPoro.new(user, user.workouts)
+    user_obj = UserPoro.new(@user, @user.workouts)
     render json: UserSerializer.new(user_obj)
   end
 
   def create
-    @user = User.find_by(id: params[:id])
-    @workout = @user.workouts.create(name: params[:name])
-    @exercises = params[:exercises].map do |exercise|
-      @details = Exercise.create!(name: exercise[:name], gif: exercise[:gifUrl])
-      @instance = WorkoutExercise.create!(workout_id: @workout.id, exercise_id: @details.id )
-    end
+    workout = @user.workouts.create(name: params[:name])
+    @exercises = WorkoutFacade.create_regimen(params[:exercises], workout.id)
     render json: CreateWorkoutSerializer.new(@exercises), status: 201
   end
 
   def update
-    data = params[:data].map do |interval|
-      @instance = WorkoutExercise.find_by(id: interval[:id])
-      interval[:intervals].each do |sets|
-        @instance.intervals.create!(reps: sets[:reps] , weight_lbs: sets[:weight_lbs])
-      end
-    end
-    # change status to completed
+    WorkoutFacade.update_regimen(params[:data])
     render json: {message: "Workout Completed"}, status: 200
+  end
 
+  private
+
+  def find_user
+    @user = User.find(params[:id])
   end
 end
