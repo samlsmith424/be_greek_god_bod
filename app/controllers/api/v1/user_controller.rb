@@ -11,7 +11,9 @@ class Api::V1::UserController < ApplicationController
     @exercises = WorkoutFacade.create_regimen(params[:exercises], @workout.id)
 
     # render json: CreateWorkoutSerializer.new(@workout), status: 201
-    render json: {data: @workout.serializable_hash(include: :exercises )}, status: 200
+    # require "pry"; binding.pry
+    render json: {data: @workout.serializable_hash(include: { exercises: { methods: :intervals }})}, status: 200
+    # user.serializable_hash(include: { exercises: { methods: :intervals }})
   end
 
   def update

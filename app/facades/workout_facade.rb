@@ -1,7 +1,7 @@
 class WorkoutFacade
   def self.create_regimen(params, workout_id)
     exercises = params.map do |exercise|
-      details = Exercise.create!(name: exercise[:name], gif: exercise[:gifUrl])
+      details = Exercise.create!(name: exercise[:name], gif: exercise[:gifUrl], equipment: exercise[:equipment])
       instance = WorkoutExercise.create!(workout_id: workout_id, exercise_id: details.id )
     end
   end
@@ -15,5 +15,4 @@ class WorkoutFacade
     end
     # change status to completed
   end
-
 end
