@@ -1,7 +1,7 @@
 class CreateWorkoutSerializer
   include JSONAPI::Serializer
 
+  set_id :id
   set_type 'workout'
-
-  attribute :exercises
+  attributes :name, :exercises
 end
