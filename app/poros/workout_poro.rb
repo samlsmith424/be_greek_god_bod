@@ -1,5 +1,6 @@
 class WorkoutPoro
-  attr_reader :workout_exercises
+  include ActiveModel::Serialization
+  attr_accessor :workout_exercises
 
   def initialize(workout)
     @name = workout.name

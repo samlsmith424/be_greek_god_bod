@@ -9,7 +9,9 @@ class Api::V1::UserController < ApplicationController
   def create
     @workout = @user.workouts.create(name: params[:name])
     @exercises = WorkoutFacade.create_regimen(params[:exercises], @workout.id)
-    render json: CreateWorkoutSerializer.new(@workout), status: 201
+
+    # render json: CreateWorkoutSerializer.new(@workout), status: 201
+    render json: {data: @workout.serializable_hash(include: :exercises )}, status: 200
   end
 
   def update
