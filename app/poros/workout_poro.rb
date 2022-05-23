@@ -3,6 +3,7 @@ class WorkoutPoro
   attr_accessor :workout_exercises
 
   def initialize(workout)
+    @id = workout.id
     @name = workout.name
     @exercises = workout.exercises
     @workout_instance = set_workout_exercises(workout.workout_exercises)
