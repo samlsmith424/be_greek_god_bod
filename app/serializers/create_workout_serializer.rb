@@ -1,7 +1,16 @@
 class CreateWorkoutSerializer
-  include JSONAPI::Serializer
+  include ActiveModel::Serializers::JSON
+  # include JSONAPI::Serializer
 
-  set_id :id
-  set_type 'workout'
-  attributes :name, :exercises
+  # id :id
+  # type 'workout'
+  # name :name
+
+  def name
+    object.name
+  end
+
+  def attributes
+    {'exercises' => object.exercises}
+  end
 end
