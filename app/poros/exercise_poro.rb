@@ -8,6 +8,6 @@ class ExercisePoro
     @name = exercise.name
     @equipment = exercise.equipment
     @gif_url = exercise.gif
-    @intervals = exercise.intervals
+    @intervals = exercise.intervals[0].intervals
   end
 end
