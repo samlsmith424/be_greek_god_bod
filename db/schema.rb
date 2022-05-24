@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_23_203144) do
+ActiveRecord::Schema.define(version: 2022_05_24_172352) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,12 @@ ActiveRecord::Schema.define(version: 2022_05_23_203144) do
     t.float "weight_lbs"
     t.bigint "workout_exercise_id"
     t.index ["workout_exercise_id"], name: "index_intervals_on_workout_exercise_id"
+  end
+
+  create_table "messages_tables", force: :cascade do |t|
+    t.text "content"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_messages_tables_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -56,6 +62,7 @@ ActiveRecord::Schema.define(version: 2022_05_23_203144) do
   end
 
   add_foreign_key "intervals", "workout_exercises"
+  add_foreign_key "messages_tables", "users"
   add_foreign_key "workout_exercises", "exercises"
   add_foreign_key "workout_exercises", "workouts"
   add_foreign_key "workouts", "users"
