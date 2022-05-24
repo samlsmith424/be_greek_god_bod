@@ -5,6 +5,7 @@ class ExercisePoro
               :intervals
 
   def initialize(exercise)
+    @id = exercise.id
     @name = exercise.name
     @equipment = exercise.equipment
     @gif_url = exercise.gif
