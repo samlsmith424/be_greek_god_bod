@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.describe 'ExerciseFacade' do
   it 'returns a list a exercises' do
-    VCR.use_cassette("many jobs") do
+    VCR.use_cassette("exercise facade") do
+
       exercises = ExerciseFacade.find_all_exercises
 
       expect(exercises).to be_an(Array)
