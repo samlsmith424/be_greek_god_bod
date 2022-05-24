@@ -15,6 +15,8 @@ class ExercisePoro
   def set_intervals(exercise)
     if exercise.nil?
       []
+    elsif exercise.intervals[0].nil?
+      []
     else
       exercise.intervals[0].intervals
     end
