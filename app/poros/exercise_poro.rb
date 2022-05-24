@@ -1,17 +1,13 @@
 class ExercisePoro
-  attr_reader :body_part,
-              :equipment,
+  attr_reader :equipment,
               :gif_url,
-              :id,
               :name,
-              :target_muscle
+              :intervals
 
   def initialize(exercise)
-    @body_part = exercise[:bodyPart]
-    @equipment = exercise[:equipment]
-    @gif_url = exercise[:gifUrl]
-    @id = exercise[:id]
-    @name = exercise[:name]
-    @target_muscle = exercise[:target]
+    @name = exercise.name
+    @equipment = exercise.equipment
+    @gif_url = exercise.gif
+    @intervals = exercise.intervals
   end
 end
