@@ -11,6 +11,7 @@ gem 'jsonapi-serializer'
 gem 'faraday'
 gem 'rack-cors'
 gem 'active_model_serializers'
+gem 'redis'
 
 
 group :development, :test do
