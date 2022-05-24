@@ -1,17 +1,16 @@
 class WorkoutPoro
   include ActiveModel::Serialization
-  attr_accessor :workout_exercises
+  attr_accessor :id, :name, :exercises
 
   def initialize(workout)
     @id = workout.id
     @name = workout.name
-    @exercises = workout.exercises
-    @workout_instance = set_workout_exercises(workout.workout_exercises)
+    @exercises = set_exercises(workout.exercises)
   end
 
-  def set_workout_exercises(workout_exercises)
-    workout_exercises.map do |workout_exercise|
-      WorkoutExercisePoro.new(workout_exercise)
+  def set_exercises(exercises)
+    exercises.map do |exercise|
+      ExercisePoro.new(exercise)
     end
   end
 end
