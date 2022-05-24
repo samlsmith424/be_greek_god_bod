@@ -9,8 +9,4 @@ class Workout < ApplicationRecord
   def self.random_sample
     all.where(status:'completed').sample
   end
-
-  # def exercises
-  #   self.exercises
-  # end
 end
