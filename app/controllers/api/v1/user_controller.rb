@@ -3,17 +3,13 @@ class Api::V1::UserController < ApplicationController
 
   def show
     user_obj = UserPoro.new(@user, @user.workouts)
-    render json: UserSerializer.new(user_obj)
+    render json: user_obj, status: 200
   end
 
   def create
     @workout = @user.workouts.create(name: params[:name])
     @exercises = WorkoutFacade.create_regimen(params[:exercises], @workout.id)
-
-    # render json: CreateWorkoutSerializer.new(@workout), status: 201
-    # require "pry"; binding.pry
     render json: {data: @workout.serializable_hash(include: { exercises: { methods: :intervals }})}, status: 200
-    # user.serializable_hash(include: { exercises: { methods: :intervals }})
   end
 
   def update
