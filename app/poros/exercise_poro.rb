@@ -13,7 +13,6 @@ class ExercisePoro
   end
 
   def set_intervals(exercise)
-    require "pry"; binding.pry
     if exercise.nil?
       []
     else
