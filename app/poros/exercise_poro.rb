@@ -9,6 +9,14 @@ class ExercisePoro
     @name = exercise.name
     @equipment = exercise.equipment
     @gif_url = exercise.gif
-    @intervals = exercise.intervals[0].intervals
+    @intervals = set_intervals(exercise)
+  end
+
+  def set_intervals(exercise)
+    if exercise.intervals.nil?
+      []
+    else
+      exercise.intervals[0].intervals
+    end
   end
 end
