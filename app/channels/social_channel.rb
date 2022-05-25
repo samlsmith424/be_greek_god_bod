@@ -1,4 +1,7 @@
+mount ActionCable.server => "/cable"
+
 class SocialChannel < ApplicationCable::Channel
+
   def subscribed
     social = Social.first
     stream_for social
