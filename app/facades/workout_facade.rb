@@ -9,6 +9,8 @@ class WorkoutFacade
   def self.update_regimen(params)
     data = params.map do |interval|
       instance = WorkoutExercise.find_by(id: interval[:id])
+      puts params
+      puts interval
       interval[:intervals].each do |sets|
         instance.intervals.create!(reps: sets[:reps], weight_lbs: sets[:weight_lbs])
       end
