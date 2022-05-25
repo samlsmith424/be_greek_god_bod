@@ -1,6 +1,11 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  config.action_cable.url = "wss://be-greek-god-bod.herokuapp.com/cable"
+
+  config.action_cable.allowed_request_origins = [ 'https://fe-greek-god-bod.herokuapp.com', /https:\/\/fe-greek-god-bod.herokuapp.*/ ]
+
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
@@ -69,6 +74,8 @@ Rails.application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+
 
   # Use a different logger for distributed setups.
   # require 'syslog/logger'
