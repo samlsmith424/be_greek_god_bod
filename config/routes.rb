@@ -6,6 +6,9 @@ Rails.application.routes.draw do
       resources :exercises, only: [:index]
       resources :workouts, only: [:index]
       resources :user, except: [:delete, :index]
+      resources :social, only: [:index, :create]
     end
   end
+
+  mount ActionCable.server => '/cable'
 end

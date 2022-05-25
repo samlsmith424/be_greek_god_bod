@@ -10,6 +10,9 @@ WorkoutExercise.destroy_all
 Exercise.destroy_all
 Workout.destroy_all
 User.destroy_all
+Message.destroy_all
+
+
 
 user_1 = User.create!(name: 'user_1', password: 'password1')
 user_2 = User.create!(name: 'user_2', password: 'password2')
@@ -127,6 +130,17 @@ end
   Interval.create!(reps: 12, weight_lbs: (125 + ((1 + i) * 5)), workout_exercise_id: "#{workout_exercise_30.id}")
   Interval.create!(reps: 12, weight_lbs: (125 + ((1 + i) * 5)), workout_exercise_id: "#{workout_exercise_31.id}")
 end
+
+message_1 = user_1.messages.create(content: "message 1", name: user_1.name)
+message_2 = user_2.messages.create(content: "message 2", name: user_2.name)
+message_3 = user_2.messages.create(content: "message 3", name: user_2.name)
+message_4 = user_3.messages.create(content: "message 4", name: user_3.name)
+message_5 = user_4.messages.create(content: "message 5", name: user_4.name)
+message_6 = user_5.messages.create(content: "message 6", name: user_5.name)
+message_7 = user_1.messages.create(content: "message 7", name: user_1.name)
+message_8 = user_4.messages.create(content: "message 8", name: user_4.name)
+message_9 = user_3.messages.create(content: "message 9", name: user_3.name)
+message_10 = user_2.messages.create(content: "message 10", name: user_2.name)
 # arms ^^
 
 # set_13 = Interval.create!(reps: 12, weight_lbs: 135.0, workout_exercise_id: "#{workout_exercise_11.id}")
