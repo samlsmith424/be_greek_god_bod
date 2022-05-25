@@ -6,6 +6,7 @@ class Api::V1::SocialController < ApplicationController
   end
 
   def create
+    puts params
     user = User.find_by(name: params[:name])
     channel = Social.first
     message = Message.create!(
