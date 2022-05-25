@@ -12,6 +12,7 @@ class WorkoutFacade
       puts params
       puts interval
       interval[:intervals].each do |sets|
+        instance = WorkoutExercise.find_by(id: sets[:workout_exercise_id])
         instance.intervals.create!(reps: sets[:reps], weight_lbs: sets[:weight_lbs])
       end
     end
