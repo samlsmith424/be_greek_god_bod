@@ -2,7 +2,8 @@ class ExercisePoro
   attr_reader :equipment,
               :gif_url,
               :name,
-              :intervals
+              :intervals,
+              :id
 
   def initialize(exercise)
     @id = exercise.id
