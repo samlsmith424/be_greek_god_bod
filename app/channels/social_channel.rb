@@ -1,4 +1,4 @@
-mount ActionCable.server => "/cable"
+# mount ActionCable.server => "/cable"
 
 class SocialChannel < ApplicationCable::Channel
 
