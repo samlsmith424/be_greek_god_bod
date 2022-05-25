@@ -19,4 +19,14 @@ RSpec.describe 'Exercise Poro' do
     exercise = ExercisePoro.new(data)
     expect(exercise.intervals).to eq([])
   end
+
+  it "returns an empty array if there are no intervals" do
+    user_1 = User.create!(name: 'user_1', password: 'password1')
+    workout_1 = Workout.create!(name: 'killer chest day', user_id: "#{user_1.id}", status: 'completed' )
+    exercise_1 = Exercise.create!(name: 'barbell bench press', gif: "http://d205bpvrqc9yn1.cloudfront.net/0025.gif", equipment: "barbell")
+    workout_exercise_1 = WorkoutExercise.create!(workout_id: "#{workout_1.id}", exercise_id: "#{exercise_1.id}")
+    interval = Interval.create!(reps: 12, weight_lbs: 185, workout_exercise_id: "#{workout_exercise_1.id}")
+# require "pry"; binding.pry
+    allow(exercise_1.intervals[0]).to receive(:intervals).and_return(interval)
+  end
 end
