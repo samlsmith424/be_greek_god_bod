@@ -135,15 +135,7 @@ social = Social.create!
 
 
 message_1 = user_1.messages.create(content: "message 1", name: user_1.name, social_id: social.id)
-message_2 = user_2.messages.create(content: "message 2", name: user_2.name, social_id: social.id)
-message_3 = user_2.messages.create(content: "message 3", name: user_2.name, social_id: social.id)
-message_4 = user_3.messages.create(content: "message 4", name: user_3.name, social_id: social.id)
-message_5 = user_4.messages.create(content: "message 5", name: user_4.name, social_id: social.id)
-message_6 = user_5.messages.create(content: "message 6", name: user_5.name, social_id: social.id)
-message_7 = user_1.messages.create(content: "message 7", name: user_1.name, social_id: social.id)
-message_8 = user_4.messages.create(content: "message 8", name: user_4.name, social_id: social.id)
-message_9 = user_3.messages.create(content: "message 9", name: user_3.name, social_id: social.id)
-message_10 = user_2.messages.create(content: "message 10", name: user_2.name, social_id: social.id)
+
 # arms ^^
 
 # set_13 = Interval.create!(reps: 12, weight_lbs: 135.0, workout_exercise_id: "#{workout_exercise_11.id}")
