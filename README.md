@@ -23,7 +23,7 @@
   
      
  # CALLING ENDPOINTS
-The follow endpoints can be called individually via URI input in your browser, or individually using [<img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white"/>](https://learning.postman.com/docs/getting-started/introduction/). Our FE application has already established API calls that are triggered automatically via user interaction. 
+The following endpoints can be called individually via URI input in your browser, or individually using [<img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white"/>](https://learning.postman.com/docs/getting-started/introduction/). Our FE application has already established API calls that are triggered automatically via user interaction. 
   
   
 
