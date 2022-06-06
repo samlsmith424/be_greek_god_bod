@@ -18,7 +18,7 @@
 
 
 # PURPOSE
-  This application is used in conjunction with the [FE respository](https://fe-greek-god-bod.herokuapp.com/) for [Greek God Bod]( https://github.com/GreekGodBod). This repository and [hosted application](https://be-greek-god-bod.herokuapp.com/api/v1/workouts) is the primary server, exposing API endpoints that our FE application calls. Please see below for a list of end points that are exposed plus detailed information about our database schema. 
+  This application is used in conjunction with the [FE respository](https://github.com/GreekGodBod/fe_greek_god_bod) for [Greek God Bod]( https://github.com/GreekGodBod). This repository and [hosted application](https://be-greek-god-bod.herokuapp.com/api/v1/workouts) is the primary server, exposing API endpoints that our FE application calls. Please see below for a list of end points that are exposed plus detailed information about our database schema. 
   
   
      
